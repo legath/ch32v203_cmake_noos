@@ -163,12 +163,14 @@ endif ()
 target_link_options(${PROJECT_NAME}.elf PRIVATE
         ${MCU_COMMON_FLAGS}
         -T${LINKER_SCRIPT}
+        -flto
         -Wl,--gc-sections
         -Wl,-Map=${PROJECT_NAME}.map
         -Wl,--cref
         -nostartfiles
-        -nostdlib
+        #-nostdlib
         --specs=nosys.specs
+        --specs=nano.specs
 )
 
 target_link_libraries(${PROJECT_NAME}.elf PRIVATE
