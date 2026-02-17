@@ -134,8 +134,8 @@ target_compile_options(${PROJECT_NAME}.elf PRIVATE
 
 
 target_compile_definitions(${PROJECT_NAME}.elf PRIVATE
-        CH32V30X
-        CH32V30X_D8C
+        CH32V20X
+        CH32V20x_D8
         __riscv_cmodel_medany
 )
 
